@@ -14,8 +14,7 @@ console.info({ answer });
 function Game() {
   const [guesses, setGuesses] = React.useState([]);
   const addGuess = (guess) => {
-    const id = Math.floor(Math.random() * 900000 + 100000);
-    setGuesses((guesses) => [...guesses, { id, guess }]);
+    setGuesses((guesses) => [...guesses, guess]);
   };
   return (
     <>
