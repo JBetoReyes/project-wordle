@@ -1,12 +1,15 @@
 import React from "react";
 import { range } from "../../utils";
 
-function Guess({ word }) {
+function Guess({ guess }) {
+  const guessLetters = Boolean(guess.length)
+    ? guess
+    : range(6).map(() => ({ letter: "", status: "" }));
   return (
     <p className="guess">
-      {range(5).map((i) => (
-        <span key={i} className="cell">
-          {word[i] ? word[i] : ""}
+      {guessLetters.map(({ letter, status }, i) => (
+        <span key={i} className={`cell ${status}`}>
+          {letter}
         </span>
       ))}
     </p>
