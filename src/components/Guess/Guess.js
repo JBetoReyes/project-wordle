@@ -4,7 +4,7 @@ import { range } from "../../utils";
 function Guess({ guess }) {
   const guessLetters = Boolean(guess.length)
     ? guess
-    : range(6).map(() => ({ letter: "", status: "" }));
+    : range(5).map(() => ({ letter: "", status: "" }));
   return (
     <p className="guess">
       {guessLetters.map(({ letter, status }, i) => (
