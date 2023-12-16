@@ -3,7 +3,6 @@ import Guess from "../Guess";
 import { range } from "../../utils";
 
 function GuessResults({ guesses }) {
-  console.log(guesses);
   return (
     <div className="guess-results">
       {range(6).map((i) => (

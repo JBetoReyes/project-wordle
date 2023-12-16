@@ -1,6 +1,6 @@
 import React from "react";
 
-function Banner({ isWinner, correctAnswer, guesses }) {
+function Banner({ isWinner, correctAnswer, guesses, restartGame }) {
   const winnerText = (
     <p>
       <strong>Congratulations!</strong> Got it in{" "}
@@ -15,6 +15,7 @@ function Banner({ isWinner, correctAnswer, guesses }) {
   return (
     <div className={`banner ${isWinner ? "happy" : "sad"}`}>
       {isWinner ? winnerText : looserText}
+      <button onClick={restartGame}>Play Again</button>
     </div>
   );
 }
