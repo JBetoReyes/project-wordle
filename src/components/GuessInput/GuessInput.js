@@ -18,6 +18,7 @@ function GuessInput({ addGuess, disabled }) {
         minLength={5}
         maxLength={5}
         pattern="[a-zA-Z]{5,5}"
+        title="Please enter 5 letters"
         required
         disabled={disabled}
       />
